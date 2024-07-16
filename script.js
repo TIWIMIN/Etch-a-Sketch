@@ -11,7 +11,6 @@ for (let i = 0; i < 16; i++) {
 
 for (let i = 0; i < 256; i++) {
     squares[i] = document.createElement("div");
-    squares[i].textContent = i; 
     squares[i].classList.add("square");
 
     let index = Math.floor(i / 16); 
