@@ -3,14 +3,39 @@
 }
 
 html, body {
-    margin: 0;
-    height: 100%;
+    padding: 5px;
+    height: 100%; 
 }
 
-body {
+#popup {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+#board {
     display: flex; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+button {
+    margin: 10px;
+    font-size: 25px; 
+    padding: 5px 15px;
+    border-radius: 12px;
+    background: white;
+    border: lightcoral solid; 
 }
 
 #container {
@@ -19,17 +44,26 @@ body {
     align-items: center;
     justify-content: center;
     align-self: center;
+    width: 960px;
+    border: rgb(255, 55, 55), solid, 10px;
+    border-radius: 10px;
+ 
 }
 
 .row {
     display:flex;
     align-items: center;
+    justify-content: center;
 }
 
 .square {
-    width: 50px;
-    height: 50px; 
-    background: black;
+    min-width: 50px;
+    min-height: 50px; 
+    background: lightgray;
     margin: 2px;
     border-radius: 5px;
+}
+
+.hover {
+    background-color: black;
 }

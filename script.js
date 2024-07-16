@@ -1,21 +1,33 @@
 const squares = []; 
 const row = [];
 const container = document.querySelector("#container");
+const reset = document.querySelector("button");
 
-// Need divs for each row to flex horizontally
-for (let i = 0; i < 16; i++) {
-    row[i] = document.createElement("div");
-    row[i].classList.add("row");
-    container.appendChild(row[i]);
+function createBoard(dim) {
+    // Need divs for each row to flex horizontally
+    for (let i = 0; i < dim; i++) {
+        row[i] = document.createElement("div");
+        row[i].classList.add("row");
+        container.appendChild(row[i]);
+    }
+
+    for (let i = 0; i < (dim ** 2); i++) {
+        squares[i] = document.createElement("div");
+        squares[i].classList.add("square");
+
+        let index = Math.floor(i / dim); 
+
+        console.log(index);
+        row[index].appendChild(squares[i]);
+    }
+
+    squares.forEach((e) => {
+        e.addEventListener("mouseover", () => {
+            e.classList.add("hover");
+        })
+    })
 }
 
-for (let i = 0; i < 256; i++) {
-    squares[i] = document.createElement("div");
-    squares[i].classList.add("square");
+createBoard(16);
 
-    let index = Math.floor(i / 16); 
-
-    console.log(index);
-    row[index].appendChild(squares[i]);
-}
-
+//reset.addEventListener("click", () => resetboad)
