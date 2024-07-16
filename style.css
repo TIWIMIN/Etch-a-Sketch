@@ -1,0 +1,17 @@
+* {
+    font-family: sans-serif;
+}
+
+#container {
+    display: flex; 
+    flex-direction: column;
+}
+
+.row {
+    display:flex
+}
+
+.square {
+    width: 100px;
+    height: 100px; 
+}
