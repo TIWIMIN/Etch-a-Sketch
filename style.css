@@ -56,5 +56,7 @@ button {
 }
 
 .hover {
+    --default-opacity: 0.5;
     background-color: rgb(70, 70, 70);
+    opacity: var(--default-opacity);
 }

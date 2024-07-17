@@ -31,8 +31,12 @@ function createBoard(dim) {
     squares.forEach((e) => {
         e.addEventListener("mouseover", () => {
             e.classList.add("hover");
-        })
-    })
+            let currentOpacity = parseFloat(getComputedStyle(e).getPropertyValue('--default-opacity')) ? parseFloat(getComputedStyle(e).getPropertyValue('--default-opacity')) : 0.5;
+            let newOpacity = (currentOpacity <= 1) ? currentOpacity + 0.05 : 1;
+            e.style.setProperty('--default-opacity', newOpacity);
+            console.log(e.style.getPropertyValue('--default-opacity'));
+        });
+    });
 }
 
 createBoard(16);
