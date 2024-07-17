@@ -3,23 +3,7 @@
 }
 
 html, body {
-    padding: 5px;
     height: 100%; 
-}
-
-#popup {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
 }
 
 #board {
@@ -35,35 +19,42 @@ button {
     padding: 5px 15px;
     border-radius: 12px;
     background: white;
-    border: lightcoral solid; 
+    border: rgb(255, 55, 55) solid; 
 }
 
 #container {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     align-self: center;
     width: 960px;
+    height: 960px;
     border: rgb(255, 55, 55), solid, 10px;
     border-radius: 10px;
+    min-width: 960px; 
+    min-height: 960px; 
+    max-width: 960px;
+    max-height: 960px;
+    margin-bottom: 50px;
  
 }
 
 .row {
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 960px;
 }
 
 .square {
-    min-width: 50px;
-    min-height: 50px; 
+    flex: 1;
+    aspect-ratio: 1;
     background: lightgray;
-    margin: 2px;
-    border-radius: 5px;
+    border-radius: 3px;
+    margin: 1px;
 }
 
 .hover {
-    background-color: black;
+    background-color: rgb(70, 70, 70);
 }
